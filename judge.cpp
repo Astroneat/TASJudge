@@ -1,7 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <fstream>
-#include <chrono>
+#include <bits/stdc++.h>
 
 /* ====================== SETTINGS ====================== */
 
@@ -42,15 +39,13 @@ checker_response perform_check(std::chrono::milliseconds exec_time) {
     ifstream brf("./testcase/bruteforce.out", fstream::in);
     ifstream cnd("./testcase/candidate.out", fstream::in);
 
-    if(rand() % 2) return {AC, 1.0, ""};
-    return {WA, 0.0, ""};
+    string bf, cn;
+    vector<string> brf_out, cnd_out;
+    while(brf >> bf) brf_out.push_back(bf);
+    while(cnd >> cn) cnd_out.push_back(cn);
 
-    if(exec_time.count() > time_limit) return {TLE, 0.0, ""};
-
-    int n; tst >> n;
-    int a,b; cnd >> a >> b;
-    if(a + b == n) return {AC, 1.0, to_string(a) + " + " + to_string(b) + " = " + to_string(n)};
-    return {WA, 0.0, to_string(a) + " + " + to_string(b) + " != " + to_string(n)};
+    if(brf_out == cnd_out) return {AC, 1.0, "All tokens matched!"};
+    return {WA, 0.0, "Answers don't match!"};
 }
 
 int main() {

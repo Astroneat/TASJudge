@@ -8,6 +8,5 @@ signed main() {
     freopen("./testcase/input.inp", "r", stdin);
     freopen("./testcase/bruteforce.out", "w", stdout);
 
-    int n; cin >> n;
-    cout << n - 1 << " 1";
+    /* Bruteforce code */
 }

@@ -8,5 +8,5 @@ signed main() {
     mt19937 rng(chrono::high_resolution_clock::now().time_since_epoch().count());
     freopen("./testcase/input.inp", "w", stdout);
 
-    cout << uniform_int_distribution<int>(1, 1e9)(rng);
+    /* Test generator */
 }
