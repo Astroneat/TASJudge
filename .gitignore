@@ -1,4 +1,5 @@
-bruteforce
-candidate
-judge
-test_gen
+/bruteforce
+/candidate
+/judge
+/test_gen
+!*.cpp
