@@ -1,5 +1,2 @@
-/bruteforce
-/candidate
-/judge
-/test_gen
-!*.cpp
+*
+!*.*
